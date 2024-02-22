@@ -1,2 +1,3 @@
-# baekjoon_step
-백준 단계별로 풀어보기
+# baekjoon
+백준 공부
+문제 풀이, 다른 방법 기록
