@@ -41,6 +41,7 @@ print(lcs_arr[num1][num2])
 
 '''
 # 원리는 똑같은데 최대값만 구하면 되기 때문에 앞 배열을 굳이 남겨놓지 않고 업데이트한다.
+# 그대로 냅두고 같을 때만 +1
 
 a = input().rstrip()
 b = input().rstrip()
