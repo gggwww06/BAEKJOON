@@ -22,17 +22,19 @@ N, S, *arr = map(int, open('././input.txt').read().split())
 #########################################################
 
 # 누적 합!!!!! 시작포인터(st), 끝포인터(ed)로 끝포인터 이동하면서? 더해가면서 빼주기
-res = N
-st = 0
-ss = 0
-for ed in range(N):
-    ss += arr[ed]
+res = 0     # 최소 길이
+st = 0      # 시작 포인터
+ss = 0      # 끝 포인터
+for ed in range(N):     # index 0부터 N까지 이동 => 끝점
+    ss += arr[ed]       # 첫 번째 값 더해줌 -> 합
     
-    while ss >= S:
-        res = min(res, ed-st+1)
-        if ss == S:
+    while ss >= S:      # 합이 S 이상이면
+        if res == 0:    # min 때문에 res 값 N으로 초기화
+            res = N
+        res = min(res, ed-st+1)     # 길이 계산해서 최솟값 갱신
+        if st >= ed:    # 시작점이 끝점이랑 겹칠 때 탈출
             break
-        ss -= arr[st]
+        ss -= arr[st]   # 시작점 한 칸 이동해보기
         st += 1
 
 print(res)
