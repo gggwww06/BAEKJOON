@@ -1,0 +1,20 @@
+# 2635 수 이어가기
+# 31120KB 60ms 277B
+
+N = int(input())
+dic = {}
+
+for snd in range(N+1):
+    lst = [N, snd]
+    i = 0
+    while True:
+        num = lst[i] - lst[i+1]
+        if num < 0:
+            break
+        lst.append(num)
+        i += 1
+    dic[len(lst)] = lst
+
+m_num = max(dic)
+print(m_num)
+print(*dic[m_num])
