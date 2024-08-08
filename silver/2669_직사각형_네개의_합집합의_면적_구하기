@@ -1,0 +1,12 @@
+# 2669 직사각형 네개의 합집합의 면적 구하기
+# 31120KB 32ms 256B
+
+arr = [[0]*100 for _ in range(100)]
+for _ in range(4):
+    jst, ist, jed, ied = map(int, input().split())
+    for i in range(ist, ied):
+        for j in range(jst, jed):
+            arr[i][j] = 1
+
+# print(sum(sum(i) for i in arr))
+print(sum(map(sum, arr)))
