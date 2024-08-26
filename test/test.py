@@ -1,10 +1,3 @@
-a = 123.0
-b = 'adf'
-
-if a == int(a):
-    print(a)
-
-print(type(a/3443))
-print(type(a))
-print(type(b))
-print(type(int))
+arr = [[2,5,1,3], [6,5,4,3]]
+arr = list(map(sorted, arr))
+print(arr)
