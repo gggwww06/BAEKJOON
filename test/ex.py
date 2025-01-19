@@ -1,1 +1,1 @@
-N, S, *arr = map(int, open('././input.txt').read().split())
+N, S, *arr = map(int, open('../input.txt').read().split())
