@@ -19,7 +19,13 @@ def check_pel(a, b):
     return 1
 
 
+# 각 시작점에서 pel인 위치 모두 저장
+pel = [[0]*N for _ in range(N)]
+for i in range(N):
+    for j in range(N):
+        pel[i][j] = check_pel(i, j)
+
+
 for i in range(M):
     a, b = qst[i]
-    res = check_pel(a-1, b-1)
-    print(res)
+    print(pel[a-1][b-1])
